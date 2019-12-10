@@ -10,6 +10,8 @@ public class RestaurantTest {
         System.out.println(dish.getName());
         System.out.println(dish.getRecommend());
 
+        System.out.printf("With discount applied the cost is now: %s%n", dish.setCost(100));
+
         RestaurantDish.eat();
 
     }
