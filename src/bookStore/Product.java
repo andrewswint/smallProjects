@@ -10,4 +10,8 @@ public class Product {
         this.cost = cost;
     }
 
+    public String getTitle() {
+        return this.title;
+    }
+
 }

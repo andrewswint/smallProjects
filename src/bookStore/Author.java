@@ -6,6 +6,4 @@ public class Author extends Person {
         super(name);
     }
 
-    public int booksWritten = 0;
-
 }
