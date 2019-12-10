@@ -1,4 +1,4 @@
-package RestaurantDishes;
+package restaurantDishes;
 
 public class RestaurantTest {
 
