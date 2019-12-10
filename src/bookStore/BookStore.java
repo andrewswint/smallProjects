@@ -32,7 +32,11 @@ public class BookStore {
 
         Person[] customers = {customer1, customer2, customer3, customer4, customer5, customer6, customer7, customer8};
 
-        System.out.printf("%s bought %s", customers[2].getName(), partner.getTitle());
+        System.out.printf("%s bought %s and %s%n", customers[2].getName(), partner.getTitle(), bestUncle.getTitle());
+
+        System.out.printf("%s bought %s%n", customers[5].getName(), soundingBoard.getTitle());
+
+        System.out.printf("%s bought %s%n", customers[7].getName(), partner.getTitle(), soundingBoard.getTitle());
 
     }
 
