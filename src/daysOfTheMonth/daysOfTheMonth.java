@@ -4,7 +4,10 @@ import java.util.*;
 
 public class daysOfTheMonth {
 
+
     public static void main (String[] args) {
+
+        Scanner sc = new Scanner(System.in);
 
         HashMap<String, Integer> months = new HashMap<>();
         months.put("January", 31);
@@ -31,10 +34,21 @@ public class daysOfTheMonth {
 
         List<Map.Entry<String, Integer>> list = new ArrayList<>(months.entrySet());
 
-        Collections.shuffle(list);
-        for (Map.Entry<String, Integer> entry : list) {
-            System.out.println(entry.getKey() + " :: " + entry.getValue());
-        }
+//        shuffles the entire list
+//        Collections.shuffle(list);
+//        for (Map.Entry<String, Integer> entry : list) {
+//            System.out.println(entry.getKey() + " :: " + entry.getValue());
+//        }
+
+        do {
+
+            System.out.printf("How many months in %s", key);
+            int input = sc.nextInt();
+            if (input == months.get(key)){
+                System.out.println("that");
+            }
+
+        } while (true);
 
     }
 
