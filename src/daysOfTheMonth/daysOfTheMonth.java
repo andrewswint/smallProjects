@@ -23,14 +23,11 @@ public class daysOfTheMonth {
         months.put("November", 30);
         months.put("December", 31);
 
-        Object[] keyValue = months.keySet().toArray();
-        Object key = keyValue[new Random().nextInt(keyValue.length)];
 
-//        gives me a random month
-        System.out.println(key);
+//        System.out.println(key);
 
 //        gives me the random int associated with the month
-        System.out.println(months.get(key));
+//        System.out.println(months.get(key));
 
         List<Map.Entry<String, Integer>> list = new ArrayList<>(months.entrySet());
 
@@ -40,15 +37,22 @@ public class daysOfTheMonth {
 //            System.out.println(entry.getKey() + " :: " + entry.getValue());
 //        }
 
+        int input;
+        String continueInput = "y";
         do {
-
-            System.out.printf("How many months in %s", key);
-            int input = sc.nextInt();
+            //        gives me a random month
+            Object[] keyValue = months.keySet().toArray();
+            Object key = keyValue[new Random().nextInt(keyValue.length)];
+            System.out.printf("How many months in %s%n", key);
+            input = sc.nextInt();
             if (input == months.get(key)){
-                System.out.println("that");
+                System.out.println("that's correct! would you like to try again? [y/n]");
+                continueInput = sc.next();
+            } else if (input != months.get(key)){
+                System.out.println("nope, try again");
             }
 
-        } while (true);
+        } while (continueInput.equalsIgnoreCase("y"));
 
     }
 
