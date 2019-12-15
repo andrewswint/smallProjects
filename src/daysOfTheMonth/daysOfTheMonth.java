@@ -1,6 +1,8 @@
 package daysOfTheMonth;
 
 import java.util.*;
+import util.Input;
+
 
 public class daysOfTheMonth {
 
@@ -39,20 +41,20 @@ public class daysOfTheMonth {
 
         int input;
         String continueInput = "y";
-        do {
-            //        gives me a random month
-            Object[] keyValue = months.keySet().toArray();
-            Object key = keyValue[new Random().nextInt(keyValue.length)];
-            System.out.printf("How many months in %s%n", key);
-            input = sc.nextInt();
-            if (input == months.get(key)){
-                System.out.println("that's correct! would you like to try again? [y/n]");
-                continueInput = sc.next();
-            } else if (input != months.get(key)){
-                System.out.println("nope, try again");
-            }
-
-        } while (continueInput.equalsIgnoreCase("y"));
+//        do {
+//            //        gives me a random month
+//            Object[] keyValue = months.keySet().toArray();
+//            Object key = keyValue[new Random().nextInt(keyValue.length)];
+//            System.out.printf("How many months in %s%n", key);
+////            input = Input.getInt(0,1000);
+////            if (input == months.get(key)){
+//                System.out.println("that's correct! would you like to try again? [y/n]");
+//                continueInput = sc.next();
+//            } else if (input != months.get(key)){
+//                System.out.println("nope, try again");
+//            }
+//
+//        } while (continueInput.equalsIgnoreCase("y"));
 
     }
 

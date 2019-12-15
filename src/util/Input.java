@@ -15,8 +15,8 @@ public class Input {
         return (input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("y"));
     }
 
-    public int getInt (int min, int max) throws Exception{
-        System.out.println("Please enter a number between 1 and 10");
+    public int getInt(int min, int max) throws Exception{
+        System.out.println("Please enter a number");
         try {
             int newInput = Integer.valueOf(getString());
                 if (newInput < max && newInput > min) {
