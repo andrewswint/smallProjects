@@ -7,7 +7,7 @@ import util.Input;
 public class daysOfTheMonth {
 
 
-    public static void main (String[] args) {
+    public static void main (String[] args) throws Exception {
 
         Scanner sc = new Scanner(System.in);
 
@@ -39,22 +39,24 @@ public class daysOfTheMonth {
 //            System.out.println(entry.getKey() + " :: " + entry.getValue());
 //        }
 
-        int input;
+
         String continueInput = "y";
-//        do {
-//            //        gives me a random month
-//            Object[] keyValue = months.keySet().toArray();
-//            Object key = keyValue[new Random().nextInt(keyValue.length)];
-//            System.out.printf("How many months in %s%n", key);
-////            input = Input.getInt(0,1000);
-////            if (input == months.get(key)){
-//                System.out.println("that's correct! would you like to try again? [y/n]");
-//                continueInput = sc.next();
-//            } else if (input != months.get(key)){
-//                System.out.println("nope, try again");
-//            }
-//
-//        } while (continueInput.equalsIgnoreCase("y"));
+        int userInput;
+        do {
+            //        gives me a random month
+            Object[] keyValue = months.keySet().toArray();
+            Object key = keyValue[new Random().nextInt(keyValue.length)];
+            System.out.printf("How many months in %s%n", key);
+            Input input = new Input();
+            userInput = input.getInt(0,1000);
+            if (input == months.get(key)){
+                System.out.println("that's correct! would you like to try again? [y/n]");
+                continueInput = sc.next();
+            } else if (input != months.get(key)){
+                System.out.println("nope, try again");
+            }
+
+        } while (continueInput.equalsIgnoreCase("y"));
 
     }
 
