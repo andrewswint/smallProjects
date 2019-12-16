@@ -25,8 +25,8 @@ public class edabit {
 //    1. Create a function that returns true if two lines rhyme and false otherwise. For the purposes of this exercise, two lines rhyme if the last word from each sentence contains the same vowels.
 
     public static void rhymes (String one, String two) {
-        String[] arr1 = one.split(" ");
-        String[] arr2 = two.split(" ");
+//        String[] arr1 = one.split(" ");
+//        String[] arr2 = two.split(" ");
 
     }
 
