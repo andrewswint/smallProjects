@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.*;
 
 public class edabit {
 
@@ -24,11 +25,28 @@ public class edabit {
 
 //    1. Create a function that returns true if two lines rhyme and false otherwise. For the purposes of this exercise, two lines rhyme if the last word from each sentence contains the same vowels.
 
-    public static void rhymes (String one, String two) {
+//    public static void rhymes (String one, String two) {
 //        String[] arr1 = one.split(" ");
 //        String[] arr2 = two.split(" ");
 
-    }
+//    }
+
+//1. Write a Java program to find a specified element in a given array of elements using Binary Search.
+        public static int binarySearch(int[] nums, int flag) {
+            int hi_num = nums.length - 1;
+            int lo_num = 0;
+            while (hi_num >= lo_num) {
+                int guess = (lo_num + hi_num) >>> 1;
+                if (nums[guess] > flag) {
+                    hi_num = guess - 1;
+                } else if (nums[guess] < flag) {
+                    lo_num = guess + 1;
+                } else {
+                    return guess;
+                }
+            }
+            return -1;
+        }
 
 
     public static void main(String[] args) {
@@ -39,6 +57,33 @@ public class edabit {
 //
 //        //    reverse a string
 //        reverseString("hello");
+
+//1.
+        int[] nums = {1, 5, 6, 7, 8, 11};
+        int search_num = 3;
+        int index = binarySearch(nums, search_num);
+        if (index == -1) {
+            System.out.println(search_num + " is not in the array");
+        } else {
+            System.out.println(search_num + " is at index " + index);
+        }
+
+//        2. Write a Java program to create a Date object using the Calendar class.
+        int year = 2019;
+        int month = 11;
+        int date = 19;
+
+        Calendar cal = Calendar.getInstance();
+        // Sets the given calendar value and the time value
+        // (millisecond offset from the Epoch) of this Calendar undefined.
+        cal.clear();
+        System.out.println();
+        cal.set(Calendar.YEAR, year);
+        cal.set(Calendar.MONTH, month);
+        cal.set(Calendar.DATE, date);
+
+        System.out.println(cal.getTime());
+        System.out.println();
 
     }
 
