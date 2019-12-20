@@ -36,7 +36,7 @@ public class edabit {
             int hi_num = nums.length - 1;
             int lo_num = 0;
             while (hi_num >= lo_num) {
-                int guess = (lo_num + hi_num) >>> 1;
+                int guess = (lo_num + hi_num);
                 if (nums[guess] > flag) {
                     hi_num = guess - 1;
                 } else if (nums[guess] < flag) {
@@ -60,7 +60,7 @@ public class edabit {
 
 //1.
         int[] nums = {1, 5, 6, 7, 8, 11};
-        int search_num = 3;
+        int search_num = -2;
         int index = binarySearch(nums, search_num);
         if (index == -1) {
             System.out.println(search_num + " is not in the array");
