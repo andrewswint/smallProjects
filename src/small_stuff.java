@@ -1,26 +1,30 @@
 import java.util.Arrays;
 import java.util.*;
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
 
 public class small_stuff {
 
-public static void conditional (int n) {
-    if (n % 2 != 0) {
-        System.out.println("Weird");
-    } else if (n % 2 == 0 && n < 5) {
-        System.out.println("Not Weird");
-    } else if (n % 2 == 0 && n >= 6 && n <= 20) {
-        System.out.println("Weird");
-    } else if (n % 2 == 0 && n > 20) {
-        System.out.println("Not Weird");
-    } else {
-        System.out.println(n);
-    }
-}
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        conditional(24);
+        int N = scanner.nextInt();
+        int x;
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(N + "x" + i + "=" + (N*i));
+        }
+
+        scanner.close();
 
     }
 
 }
+
