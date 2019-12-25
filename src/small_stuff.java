@@ -15,14 +15,16 @@ public class small_stuff {
 
     public static void main(String[] args) {
 
-        int N = scanner.nextInt();
-        int x;
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(N + "x" + i + "=" + (N*i));
-        }
+        Scanner scan = new Scanner(System.in);
+        int i = scan.nextInt();
+        scan = new Scanner(System.in);
+        double d = scan.nextDouble();
+        scan = new Scanner(System.in);
+        String s = scan.next();
 
-        scanner.close();
+        System.out.println("String: " + s);
+        System.out.println("Double: " + d);
+        System.out.println("Int: " + i);
 
     }
 
