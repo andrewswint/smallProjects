@@ -70,6 +70,11 @@ choices.forEach(choice => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
 
+        let classToApply = "incorrect";
+        if (selectedAnswer == currentQuestion.answer) {
+            classToApply = "correct";
+        }
+
         getNewQuestions();
     });
 });
