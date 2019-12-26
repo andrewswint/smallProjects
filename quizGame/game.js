@@ -75,7 +75,12 @@ choices.forEach(choice => {
             classToApply = "correct";
         }
 
-        getNewQuestions();
+        selectedChoice.parentElement.classList.add(classToApply);
+
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestions();
+        }, 1000);
     });
 });
 
