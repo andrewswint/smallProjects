@@ -19,6 +19,7 @@ h1 {
     font-size: 5.4rem;
     color: #e8e60f;
     margin-bottom: 5rem;
+    text-shadow: .2rem .2rem black;
 }
 
 h1 > span {
