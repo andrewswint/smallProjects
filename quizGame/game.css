@@ -3,26 +3,27 @@
     margin-bottom: 0.5rem;
     width: 100%;
     font-size: 1.8rem;
-    border: 0.1rem solid rgba(86, 165, 235, 0.25);
-    background-color: white;
+    border: 0.1rem solid rgba(145, 145, 145, 0.25);
+    background-color: #1f1f1f;
 }
 
 .choice-container:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(145, 145, 145, 0.5);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
 }
 
 .choice-prefix {
     padding: 1.5rem 2.5rem;
-    background-color: #56a5eb;
-    color: white;
+    background-color: #e8e60f;
+    color: black;
 }
 
 .choice-text {
     padding: 1.5rem;
     width: 100%;
+    color: #e8e60f;
 }
 
 .correct {
@@ -51,13 +52,13 @@
 #progressBar {
     width: 20rem;
     height: 4rem;
-    border: 0.3rem solid #56a5eb;
+    border: 0.3rem solid #1f1f1f;
     margin-top: 1.5rem;
 }
 
 #progressBarFull {
     height: 3.4rem;
-    background-color: #56a5eb;
+    background-color: #e8e60f;
     width: 0;
 }
 
@@ -65,9 +66,9 @@
 #loader {
     width: 12rem;
     height: 12rem;
-    border: 1.6rem solid white;
+    border: 1.6rem solid #262626;
     border-radius: 50%;
-    border-top: 1.6rem solid #56a5eb;
+    border-top: 1.6rem solid #e8e60f;
     animation: spin 2s linear infinite;
 }
 
