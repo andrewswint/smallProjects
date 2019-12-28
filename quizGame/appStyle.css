@@ -50,9 +50,9 @@ h3 {
     padding: 2rem;
 }
 
-.container > * {
-   display: none;
-}
+/*.container > * {*/
+/*   display: none;*/
+/*}*/
 
 .flex-column {
     display: flex;

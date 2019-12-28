@@ -1,13 +1,17 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById("progressText");
-const scoreText = document.getElementById("score")
+const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
+const loader = document.getElementById("loader");
+const game = document.getElementById("game")
+const CORRECT_BONUS = 10;
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+let MAX_QUESTIONS;
 
 
 //===================Questions from json
@@ -47,21 +51,22 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=mul
             });
             return formattedQuestion;
         });
+        MAX_QUESTIONS = questions.length;
         startGame();
     })
     .catch((err) => {
         console.log("error")
     });
 
-//===================Constants
-const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
-
 startGame  = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
     getNewQuestions();
+    setTimeout(() => {
+        game.classList.remove("hidden");
+        loader.classList.add("hidden");
+    }, 1000);
 };
 getNewQuestions = () => {
 
