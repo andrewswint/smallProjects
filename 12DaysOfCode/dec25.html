@@ -14,43 +14,19 @@
 
 <!--=======================songs table================-->
 <h2 class="text-center">Top 3 Christmas Songs</h2>
-<table class="table">
-    <thead>
-    <tr>
-        <th scope="col">#</th>
-        <th scope="col">Song</th>
-        <th scope="col">Artist</th>
-        <th scope="col">Year</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <th scope="row">1</th>
-        <td><a href="https://www.youtube.com/watch?v=sCabI3MdV9g">Carol Of The Bells</a></td>
-        <td>Trans-Siberian Orchestra</td>
-        <td>1995</td>
-    </tr>
-    <tr>
-        <th scope="row">2</th>
-        <td><a href="https://www.youtube.com/watch?v=Dkq3LD-4pmM">Holly Jolly Christmas</a></td>
-        <td>Michael Buble</td>
-        <td>2011</td>
-    </tr>
-    <tr>
-        <th scope="row">3</th>
-        <td><a href="https://www.youtube.com/watch?v=jHefeA-hyMA">Silver Bells</a></td>
-        <td>Bing Crosby</td>
-        <td>1950</td>
-    </tr>
-    </tbody>
-</table>
+<ul id="list">
+    <li><a href="https://www.youtube.com/watch?v=sCabI3MdV9g">Carol Of The Bells</a></li>
+    <li><a href="https://www.youtube.com/watch?v=Dkq3LD-4pmM">Holly Jolly Christmas</a></li>
+    <li><a href="https://www.youtube.com/watch?v=jHefeA-hyMA">Silver Bells</a></li>
+</ul>
 
 <!--===================input===========================-->
 <input type="text" id="form1">
-<button type="submit" form="form1" value="submit">Submit</button>
+<button type="submit" form="form1" value="submit" id="btn" onclick="addSong()">Submit</button>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="js/dec27.js"></script>
 </body>
 </html>
