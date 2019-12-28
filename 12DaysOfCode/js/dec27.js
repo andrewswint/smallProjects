@@ -1,9 +1,11 @@
 let input = document.getElementById("form1");
 let url = document.getElementById("urlInput")
 
+$(document).ready(function () {
 
-addSong = () => {
-    input.value;
-    document.getElementById("list").innerHTML =
-        `<li>${input}</li>`
-};
+    $("#btn").click(function () {
+       $("ul").append("<li>" + input.value + "</li>")
+    });
+
+});
+
