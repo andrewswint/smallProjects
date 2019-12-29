@@ -1,10 +1,10 @@
-package Christmas;
+package christmas;
 
-public class reindeer {
+public class Reindeer {
 
     protected String name;
 
-    public reindeer(String name) {
+    public Reindeer(String name) {
         this.name = name;
         System.out.printf("The reindeer created is %s%n", name);
     }

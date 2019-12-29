@@ -1,8 +1,7 @@
-package Christmas;
-import java.util.Scanner;
+package christmas;
 import util.Input;
 
-public class santa {
+public class Santa {
 
 
 
@@ -21,7 +20,7 @@ public class santa {
 
         santasQuestions();
 
-        reindeer donner = new reindeer("donner");
+        Reindeer donner = new Reindeer("donner");
 
 
     }
