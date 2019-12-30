@@ -51,5 +51,6 @@ public class Santa {
         Reindeer donner9 = new Reindeer("donner9");
         reindeer[8] = donner9;
 
+        System.out.println(donner.getName());
     }
 }
