@@ -18,6 +18,11 @@ public class Santa {
         System.out.println(userInput);
     }
 
+    public static Reindeer[] addReindeer(Reindeer[] reindeer, Reindeer newReindeer) {
+        reindeer = Arrays.copyOf(reindeer,reindeer.length + 1);
+        reindeer[reindeer.length-1] = newReindeer;
+        return reindeer;
+    }
 
 
     public static void main(String[] args) {
@@ -51,6 +56,10 @@ public class Santa {
         Reindeer donner9 = new Reindeer("donner9");
         reindeer[8] = donner9;
 
-        System.out.println(donner.getName());
+        Reindeer donner10 = new Reindeer("donner10");
+
+        addReindeer(reindeer, donner10);
+
+        System.out.println(reindeer.length);
     }
 }
