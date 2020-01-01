@@ -3,21 +3,26 @@ import util.Input;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class Santa {
 
     public static Reindeer[] reindeer = new Reindeer[9];
-    static ArrayList<String> wishList = new ArrayList<>();
+//    static ArrayList<String> wishList = new ArrayList<>();
+    static HashMap<String, String> wishList = new HashMap<>();
 
     public static void santasQuestions () {
         Input input = new Input();
+        System.out.println("What is your name?");
+        String name = input.getString();
         System.out.println("What do you want for Christmas?");
         String userInput = input.getString();
         if (userInput.length() == 0) {
             System.out.println("Please enter a valid response...");
             santasQuestions();
         }
-        wishList.add(userInput);
+//        wishList.add(userInput);
+        wishList.put(name,userInput);
         System.out.println(wishList);
         System.out.println("Would you like tell santa another? [y/n]");
         userInput = input.getString();
