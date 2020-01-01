@@ -19,6 +19,11 @@ public class Santa {
         }
         wishList.add(userInput);
         System.out.println(wishList);
+        System.out.println("Would you like tell santa another? [y/n]");
+        userInput = input.getString();
+        if (userInput.equalsIgnoreCase("y")) {
+            santasQuestions();
+        }
     }
 
 
@@ -33,7 +38,6 @@ public class Santa {
     public static void main(String[] args) {
 
         santasQuestions();
-
 
 //        Reindeer donner = new Reindeer("donner");
 //        reindeer[0] = donner;
