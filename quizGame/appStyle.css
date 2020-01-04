@@ -51,10 +51,6 @@ h3 {
     padding: 2rem;
 }
 
-/*.container > * {*/
-/*   display: none;*/
-/*}*/
-
 .flex-column {
     display: flex;
     flex-direction: column;
