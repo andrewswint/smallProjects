@@ -8,3 +8,26 @@
     opacity: .5;
     color: white;
 }
+
+.table-container {
+    margin: 0 10% 0 10%;
+}
+
+.list-container {
+    display: flex;
+    justify-content: center;
+}
+
+#list {
+    list-style: none;
+}
+
+li a{
+    color: black;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+
+}
