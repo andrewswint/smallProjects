@@ -15,5 +15,5 @@ USE christmas_db;
 # );
 
 ALTER TABLE people
-    ADD  UNIQUE (first_name, last_name),
+    ADD  UNIQUE (first_name, last_name);
 
