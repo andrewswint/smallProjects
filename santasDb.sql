@@ -2,9 +2,8 @@
 #
 # GRANT ALL ON *.* TO 'santaclaus'@'localhost';
 
-CREATE DATABASE IF NOT EXISTS 'christmas_db';
-
-USE 'christmas_db';
+# CREATE DATABASE IF NOT EXISTS christmas_db;
+USE christmas_db;
 
 CREATE TABLE people(
     first_name VARCHAR(50) NOT NULL,
@@ -14,5 +13,3 @@ CREATE TABLE people(
     nice BOOLEAN NOT NULL,
     wishlist BLOB
 );
-
-INSERT INTO people
