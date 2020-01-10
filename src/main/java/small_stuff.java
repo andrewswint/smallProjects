@@ -22,6 +22,12 @@ public class small_stuff {
         return bucket;
     }
 
+//    morning warmup. accept two numbers and use them as base and exponent
+    public static void square (double base, double exp) {
+
+        System.out.println(Math.pow(base,exp));
+    }
+
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
@@ -34,8 +40,11 @@ public class small_stuff {
 //        System.out.println("String: " + s);
 //        System.out.println("Double: " + d);
 //        System.out.println("Int: " + i);
-        int num = scan.nextInt();
-        System.out.println(addingUp(num));
+        int num1 = scan.nextInt();
+        int num2 = scan.nextInt();
+
+//        System.out.println(addingUp(num));
+        square(num1,num2);
 
     }
 
