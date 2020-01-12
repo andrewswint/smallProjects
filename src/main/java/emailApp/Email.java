@@ -13,7 +13,7 @@ public class Email {
     private String department;
     private String company;
     private int defaultPasswordLength = 10;
-    private int mailboxCapacity;
+    private int mailboxCapacity = 500;
     private String alternateEmail;
 
 //    constructor for first name and last name
@@ -24,8 +24,8 @@ public class Email {
         this.company = setCompany();
         this.password = randomPassword(defaultPasswordLength);
         email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department.toLowerCase() + company.toLowerCase() + ".com";
-        System.out.println(email);
-        System.out.println(password);
+        System.out.println("email is: " + email);
+        System.out.println("password is: " + password);
     }
 
     public String getFirstName() {
@@ -92,9 +92,18 @@ public class Email {
     }
 
 //    set the mailbox capacity
+    public void setMailboxCapacity(int capacity) {
+        this.mailboxCapacity = capacity;
+    }
 
 //    set alternate email
+    public void setAlternateEmail(String altEmail) {
+        this.alternateEmail = altEmail;
+    }
 
 //    change the password
+    public void changePassword(String password) {
+        this.password = password;
+    }
 
 }
