@@ -17,13 +17,13 @@ public class Email {
     private String alternateEmail;
 
 //    constructor for first name and last name
-    public Email (String firstName, String lastName) throws Exception {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Email () throws Exception {
+        this.firstName = setFirstName();
+        this.lastName = setLastName();
         this.department = setDepartment();
         this.company = setCompany();
         this.password = randomPassword(defaultPasswordLength);
-        email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + company + ".com";
+        email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department.toLowerCase() + company.toLowerCase() + ".com";
         System.out.println(email);
         System.out.println(password);
     }
@@ -58,6 +58,19 @@ public class Email {
         }
     }
 
+//    setters
+    private String setFirstName() {
+        Input input = new Input();
+        System.out.println("What is the first name?");
+        String first = input.getString();
+        return first;
+    }
+    private String setLastName() {
+        Input input = new Input();
+        System.out.println("What is the last name?");
+        String last = input.getString();
+        return last;
+    }
 
 //    ask for company
     private  String setCompany() {
