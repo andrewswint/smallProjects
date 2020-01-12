@@ -23,9 +23,9 @@ public class EmailTest {
         assertEquals("testLast", test1.getLastName());
     }
 
-    @Test
-    public void testDepartmentMethod() {
-        
-    }
+//    @Test
+//    public void testDepartmentMethod() {
+//
+//    }
 
 }
