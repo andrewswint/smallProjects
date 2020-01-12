@@ -27,9 +27,11 @@ public class Email {
     }
 //    ask for the department
     private String setDepartment() throws Exception {
-        Scanner sc = new Scanner(System.in);
+        Input input = new Input();
+//        Scanner sc = new Scanner(System.in);
         System.out.print("enter department\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none");
-        int userInput = sc.nextInt();
+        int userInput = input.getInt(1,5);
+//        int userInput = sc.nextInt();
         if (userInput == 1) {
             return "Sales";
         } else if (userInput == 2) {
