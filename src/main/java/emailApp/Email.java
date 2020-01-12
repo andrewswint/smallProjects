@@ -28,18 +28,6 @@ public class Email {
         System.out.println("password is: " + password);
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
 //    ask for the department
     private String setDepartment() throws Exception {
         Input input = new Input();
@@ -72,6 +60,21 @@ public class Email {
         return last;
     }
 
+    //    set the mailbox capacity
+    public void setMailboxCapacity(int capacity) {
+        this.mailboxCapacity = capacity;
+    }
+
+    //    set alternate email
+    public void setAlternateEmail(String altEmail) {
+        this.alternateEmail = altEmail;
+    }
+
+    //    change the password
+    public void changePassword(String password) {
+        this.password = password;
+    }
+
 //    ask for company
     private  String setCompany() {
         Input input = new Input();
@@ -91,19 +94,24 @@ public class Email {
         return new String(password);
     }
 
-//    set the mailbox capacity
-    public void setMailboxCapacity(int capacity) {
-        this.mailboxCapacity = capacity;
+    public int getMailboxCapacity() {
+        return mailboxCapacity;
     }
 
-//    set alternate email
-    public void setAlternateEmail(String altEmail) {
-        this.alternateEmail = altEmail;
+    public String getAlternateEmail() {
+        return alternateEmail;
     }
 
-//    change the password
-    public void changePassword(String password) {
-        this.password = password;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
 }
