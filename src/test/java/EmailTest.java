@@ -23,6 +23,12 @@ public class EmailTest {
         assertEquals("testLast", test1.getLastName());
     }
 
+    @Test
+    public void testPassword() {
+        assertNotNull(test1.getPassword());
+        System.out.println(test1.getPassword());
+    }
+
 //    @Test
 //    public void testDepartmentMethod() {
 //

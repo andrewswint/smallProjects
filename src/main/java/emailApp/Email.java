@@ -9,6 +9,7 @@ public class Email {
     private String lastName;
     private String password;
     private String department;
+    private int defaultPasswordLength = 10;
     private int mailboxCapacity;
     private String alternateEmail;
 
@@ -16,8 +17,8 @@ public class Email {
     public Email (String firstName, String lastName) throws Exception {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.department = setDepartment();
-        this.password = randomPassword(8);
+//        this.department = setDepartment();
+        this.password = randomPassword(defaultPasswordLength);
     }
 
     public String getFirstName() {
@@ -27,6 +28,11 @@ public class Email {
     public String getLastName() {
         return lastName;
     }
+
+    public String getPassword() {
+        return password;
+    }
+
 //    ask for the department
     private String setDepartment() throws Exception {
         Input input = new Input();
@@ -49,7 +55,7 @@ public class Email {
         String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%";
         char[] password = new char[length];
         for (int i = 0; i < length; i++) {
-            int randomNumber = (int) Math.random() * passwordSet.length();
+            int randomNumber = (int) (Math.random() * passwordSet.length());
             password[i] = passwordSet.charAt(randomNumber);
         }
         return new String(password);
