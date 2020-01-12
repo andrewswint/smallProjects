@@ -20,7 +20,7 @@ public class Input {
         try {
             int newInput = Integer.parseInt(getString());
                 if (newInput < max && newInput > min) {
-                    System.out.println("Great! " + newInput + " is in range!");
+                    System.out.println("Thank you");
                 } else {
                     System.out.println("That's not right. Please enter a number between 1 and 10");
                     throw new Exception("Recursion");
