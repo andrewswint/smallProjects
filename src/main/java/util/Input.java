@@ -18,7 +18,7 @@ public class Input {
     public int getInt(int min, int max) throws Exception{
         System.out.println("Please enter a number");
         try {
-            int newInput = Integer.valueOf(getString());
+            int newInput = Integer.parseInt(getString());
                 if (newInput < max && newInput > min) {
                     System.out.println("Great! " + newInput + " is in range!");
                 } else {
@@ -35,7 +35,7 @@ public class Input {
     public int getInt() throws Exception{
         System.out.println("Please enter a number");
         try {
-            int newInput = Integer.valueOf(getString());
+            int newInput = Integer.parseInt(getString());
             return newInput;
         } catch (Exception e){
             System.out.println("Please try again");

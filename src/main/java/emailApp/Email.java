@@ -1,4 +1,7 @@
 package emailApp;
+import util.Input;
+
+import java.util.Scanner;
 
 public class Email {
 
@@ -23,7 +26,20 @@ public class Email {
         return lastName;
     }
 //    ask for the department
-
+    private String setDepartment() throws Exception {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter department\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none");
+        int userInput = sc.nextInt();
+        if (userInput == 1) {
+            return "Sales";
+        } else if (userInput == 2) {
+            return "Development";
+        } else if (userInput == 3) {
+            return "Accounting";
+        } else {
+            return "";
+        }
+    }
 //    generate random password
 
 //    set the mailbox capacity
