@@ -24,8 +24,6 @@ public class Email {
         this.company = setCompany();
         this.password = randomPassword(defaultPasswordLength);
         email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department.toLowerCase() + company.toLowerCase() + ".com";
-        System.out.println("email is: " + email);
-        System.out.println("password is: " + password);
     }
 
 //    ask for the department
@@ -112,6 +110,14 @@ public class Email {
 
     public String getPassword() {
         return password;
+    }
+
+//    show all info
+    public String showInfo() {
+        return "display name: " + firstName + " " + lastName +
+                "\ncompany email: " + email +
+                "\npassword: " + password +
+                "\nmailbox capacity: " + mailboxCapacity + "mb";
     }
 
 }
