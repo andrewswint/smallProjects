@@ -112,6 +112,8 @@ public class Email {
         return password;
     }
 
+    public String getDepartment() {return department; }
+
 //    show all info
     public String showInfo() {
         return "display name: " + firstName + " " + lastName +
