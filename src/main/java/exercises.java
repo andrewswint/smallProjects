@@ -37,8 +37,8 @@ public class exercises {
         {
             for (j = i + 1; j < n; j++)
             {
-                if (ar[i] == ar[j])
-                    bucket += 1;
+                if ((ar[i] == ar[j]) && (i != j))
+                    bucket = bucket + 1;
             }
         }
         System.out.println(bucket);
@@ -47,9 +47,9 @@ public class exercises {
 
 
     public static void main(String[] args) throws IOException {
-        int[] ar = {1,1,2,3,4,4,5};
+        int[] ar = {1, 2, 5, 5, 6, 6, 7, 2};
         sockMerchant(7, ar);
-
+//
 //        Scanner scanner = new Scanner(System.in);
 ////        ###5
 //
