@@ -31,23 +31,21 @@ public class exercises {
 //    ###5 John works at a clothing store. He has a large pile of socks that he must pair by color for sale. Given an array of integers representing the color of each sock, determine how many pairs of socks with matching colors there are.
 // Complete the sockMerchant function below.
     static int sockMerchant(int n, int[] ar) {
-        int i, j;
-        int bucket = 0;
-        for (i = 0; i < n; i++)
-        {
-            for (j = i + 1; j < n; j++)
-            {
-                if ((ar[i] == ar[j]) && (i != j))
-                    bucket = bucket + 1;
+        Arrays.sort(ar);
+        int count=0;
+        for(int i=0;i<n-1;i++){
+            if(ar[i]==ar[i+1]){
+                count=count+1;
+                i=i+1;
             }
         }
-        System.out.println(bucket);
-        return bucket;
+        System.out.println(count);
+        return count;
     }
 
 
     public static void main(String[] args) throws IOException {
-        int[] ar = {1, 2, 5, 5, 6, 6, 7, 2};
+        int[] ar = {1,2,1,2,1,3,2};
         sockMerchant(7, ar);
 //
 //        Scanner scanner = new Scanner(System.in);
