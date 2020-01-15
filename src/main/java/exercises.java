@@ -45,35 +45,7 @@ public class exercises {
 
 
     public static void main(String[] args) throws IOException {
-        int[] ar = {1,2,1,2,1,3,2};
-        sockMerchant(7, ar);
-//
-//        Scanner scanner = new Scanner(System.in);
-////        ###5
-//
-//            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-//
-//            int n = scanner.nextInt();
-//            scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-//
-//            int[] ar = new int[n];
-//
-//            String[] arItems = scanner.nextLine().split(" ");
-//            scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-//
-//            for (int i = 0; i < n; i++) {
-//                int arItem = Integer.parseInt(arItems[i]);
-//                ar[i] = arItem;
-//            }
-//
-//            int result = sockMerchant(n, ar);
-//
-//            bufferedWriter.write(String.valueOf(result));
-//            bufferedWriter.newLine();
-//
-//            bufferedWriter.close();
-//
-//            scanner.close();
+
         }
     }
 
