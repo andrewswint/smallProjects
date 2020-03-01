@@ -2,16 +2,25 @@ import java.util.Scanner;
 
 public class hackerranck {
 
+    public static int minSec(int minutes) {
+        return minutes * 60;
+    }
+
+    public static int convert(int hours, int minutes) {
+        return ((hours * 60) * 60) + (minutes * 60);
+    }
+
+    public static int sumOfTwo(int a, int b) {
+        return a + b;
+    }
+
     public static void main(String[] args) {
 
-        Scanner sc=new Scanner(System.in);
-        System.out.println("================================");
-        for(int i=0;i<3;i++) {
-            String s1=sc.next();
-            int x=sc.nextInt();
-            System.out.printf( "%-15s%03d %n", s1, x);
-        }
-        System.out.println("================================");
+        System.out.println(minSec(5));
+        System.out.println(minSec(3));
+        System.out.println(minSec(2));
+
+        System.out.println(convert(1,3));
 
     }
 
