@@ -5,18 +5,16 @@ public class hackerranck {
     public static void main(String[] args) {
 
         Scanner sc=new Scanner(System.in);
-        int x = sc.nextInt();
-        double y = sc.nextDouble();
-        sc.nextLine();
-        String s = sc.nextLine();
-
-
-        System.out.println("String: " + s);
-        System.out.println("Double: " + y);
-        System.out.println("Int: " + x);
-
-
+        System.out.println("================================");
+        for(int i=0;i<3;i++) {
+            String s1=sc.next();
+            int x=sc.nextInt();
+            System.out.printf( "%-15s%03d %n", s1, x);
+        }
+        System.out.println("================================");
 
     }
 
 }
+
+
