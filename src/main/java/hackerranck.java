@@ -4,14 +4,16 @@ public class hackerranck {
 
     public static void main(String[] args) {
 
-        Scanner scan = new Scanner(System.in);
-//        int a = scan.nextInt();
-//        int b = scan.nextInt();
-//        int c = scan.nextInt();
-//
-//        System.out.println(a);
-//        System.out.println(b);
-//        System.out.println(c);
+        Scanner sc=new Scanner(System.in);
+        int x = sc.nextInt();
+        double y = sc.nextDouble();
+        sc.nextLine();
+        String s = sc.nextLine();
+
+
+        System.out.println("String: " + s);
+        System.out.println("Double: " + y);
+        System.out.println("Int: " + x);
 
 
 
