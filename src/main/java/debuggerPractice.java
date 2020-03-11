@@ -8,7 +8,7 @@ public class debuggerPractice {
         for (String s : input) {
             result += Integer.parseInt(s);
         }
-        return result;
+        return result/input.length;
     }
 
     public static void main(String[] args) throws Exception {
