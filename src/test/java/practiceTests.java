@@ -1,9 +1,15 @@
 import org.junit.Assert;
+import org.junit.Rule;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import exercises.*;
+import util.Input;
 
-public class practiceTests {
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.util.Scanner;
+
+public class practiceTests<TextFromStandardInputStream> {
 
     @Test
     public void perimeterTest(){
@@ -21,4 +27,28 @@ public class practiceTests {
 
     }
 
+    @Test
+    public void nameConcatTest() {
+        assertEquals("Andrew Swint", edabit.name("Andrew", "Swint"));
+    }
+
+    @Test
+    public void EOFTest() {
+        String data = "line 1\n" +
+                "line 2\n" +
+                "line 3";
+        InputStream stdin = System.in;
+        try {
+            System.setIn(new ByteArrayInputStream(data.getBytes()));
+            Scanner sc = new Scanner(System.in);
+            int i = 0;
+            while(sc.hasNext()) {
+                String input = sc.nextLine();
+                i++;
+                System.out.println(i + " " + input);
+            }
+        } finally {
+            System.setIn(stdin);
+        }
+    }
 }
