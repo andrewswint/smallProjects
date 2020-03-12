@@ -1,3 +1,5 @@
+package exercises;
+
 public class denimFlip {
 
     public static int[] flip (int[] array) {
