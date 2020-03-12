@@ -36,8 +36,9 @@ public class practiceTests<TextFromStandardInputStream> {
     public void EOFTest() {
         String data = "line 1\n" +
                 "line 2\n" +
-                "line 3";
+                "line 3\n";
         InputStream stdin = System.in;
+        String output = "";
         try {
             System.setIn(new ByteArrayInputStream(data.getBytes()));
             Scanner sc = new Scanner(System.in);
@@ -45,10 +46,13 @@ public class practiceTests<TextFromStandardInputStream> {
             while(sc.hasNext()) {
                 String input = sc.nextLine();
                 i++;
-                System.out.println(i + " " + input);
+                output += (i + " " + input + "\n");
             }
         } finally {
             System.setIn(stdin);
         }
+        assertEquals("1 line 1\n" +
+                "2 line 2\n" +
+                "3 line 3\n", output);
     }
 }
