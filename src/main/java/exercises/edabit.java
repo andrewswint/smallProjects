@@ -16,15 +16,18 @@ public class edabit {
         return first + " " + last;
     }
 
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int i = 0;
-        while(sc.hasNext()) {
-            String input = sc.nextLine();
-            i++;
-            System.out.println(i + " " + input);
+    public static int parallelogram(int b, int h) throws Exception {
+        if (b > 0 && h > 0) {
+            return b * h;
+        } else {
+            throw new Exception("Breadth and height must be positive");
         }
     }
 
+
+    public static void main(String[] args) throws Exception {
+//        Scanner sc = new Scanner(System.in);
+        parallelogram(-1,2);
+    }
 }
+
