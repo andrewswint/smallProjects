@@ -24,11 +24,17 @@
     <p>Total in dollars: {{quantity * cost}}</p>
 
     <div ng-init="height={feet:5,inches:9}">
+<!--        angular expression-->
         <p>My height: {{height.feet}} ft {{height.inches}} in</p>
+<!--        using ng-bind-->
         <p>Height in binds <span ng-bind="height.feet"></span>ft <span ng-bind="height.inches"></span>in</p>
-
     </div>
 
+    <div ng-init="points=[1,2,3,4,5,6,7,8,9]">
+        <p>Third point on the array (index 2) is: {{points[2]}}</p>
+    </div>
+
+    <div test-Directive></div>
 
 </div>
 
@@ -41,6 +47,11 @@
         $scope.myCol= "lightblue";
         $scope.quantity= 0;
         $scope.cost= 0;
+    });
+    app.directive("testDirective", function() {
+        return {
+            template : "test directive"
+        }
     });
 </script>
 
