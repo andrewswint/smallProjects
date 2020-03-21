@@ -3,20 +3,47 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <body>
 
-<div ng-app="">
-    <p>Name : <input type="text" ng-model="name" ng-init="firstName='Andrew'"></p>
-    <h1>Hello {{name}}</h1>
+<div ng-app="firstApp" ng-controller="myCtrl">
 
-    <p>The name is <span ng-bind="firstName"></span></p>
+    First Name: <input type="text" ng-model="firstName"><br>
+    Last Name: <input type="text" ng-model="lastName"><br>
+
+    Full Name: {{firstName + " " + lastName}}
+
+<!--    <p>Name : <input type="text" ng-model="name" ng-init="firstName='Denim';lastName='Group'"></p>-->
+
+    <p>The name is <span ng-bind="firstName"></span><span> </span><span ng-bind="lastName"></span></p>
 
     <p>My first expression: {{ 5 + 5 }}</p>
 
+    <input style="background-color:{{myCol}}" ng-model="myCol"><br>
+
+    Quantity: <input type="text" ng-model="quantity"><br>
+    Cost: <input type="text" ng-model="cost">
+
+    <p>Total in dollars: {{quantity * cost}}</p>
+
+    <div ng-init="height={feet:5,inches:9}">
+        <p>My height: {{height.feet}} ft {{height.inches}} in</p>
+        <p>Height in binds <span ng-bind="height.feet"></span>ft <span ng-bind="height.inches"></span>in</p>
+
+    </div>
+
+
 </div>
 
 
+<script>
+    var app = angular.module('firstApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.firstName= "Denim";
+        $scope.lastName= "Group";
+        $scope.myCol= "lightblue";
+        $scope.quantity= 0;
+        $scope.cost= 0;
+    });
+</script>
 
-
-</div>
 
 </body>
 </html>
