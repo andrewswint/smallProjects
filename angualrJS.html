@@ -36,6 +36,27 @@
 
     <div test-Directive></div>
 
+    <div ng-init="names=['Mike','Kyle','Andy']">
+        <ul>
+            <li ng-repeat="x in names">
+                {{ x }}
+            </li>
+        </ul>
+    </div>
+
+    <div ng-init="foods=[
+{food:'pizza',country:'Italy'},
+{food:'burger',country:'America'},
+{food:'rice',country:'Japan'}]">
+
+        <ul>
+            <li ng-repeat="x in foods">
+                {{ x.food + ', ' + x.country }}
+            </li>
+        </ul>
+
+    </div>
+
 </div>
 
 
