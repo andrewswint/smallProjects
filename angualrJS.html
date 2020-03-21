@@ -57,7 +57,21 @@
 
     </div>
 
+    <new-Element></new-Element>
+
 </div>
+
+
+
+<!--
+The legal restrict values are:
+
+E for Element name
+A for Attribute
+C for Class
+M for Comment
+
+-->
 
 
 <script>
@@ -73,6 +87,12 @@
         return {
             template : "test directive"
         }
+    });
+    app.directive("newElement", function() {
+        return {
+            restrict : "E",
+            template : "<h1>Made by a directive!</h1>"
+        };
     });
 </script>
 
