@@ -1,0 +1,26 @@
+[
+    {
+      "name": "black",
+      "code": "#000"
+    },
+    {
+      "name": "white",
+      "code": "#FFF"
+    },
+    {
+      "name": "red",
+      "code": "#FF0"
+    },
+    {
+      "name": "blue",
+      "code": "#00F"
+    },
+    {
+      "name": "yellow",
+      "code": "#FF0"
+    },
+    {
+      "name": "green",
+      "code": "#0F0"
+    }
+  ]
