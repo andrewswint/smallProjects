@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<style>
+    /*inputs that are required or are invalid will fill in this color*/
+    input.ng-invalid {
+        background-color: lightblue;
+    }
+</style>
 <body>
 
 <div ng-app="firstApp" ng-controller="myCtrl">
@@ -8,7 +14,10 @@
     First Name: <input type="text" ng-model="firstName"><br>
     Last Name: <input type="text" ng-model="lastName"><br>
 
-    Full Name: {{firstName + " " + lastName}}
+
+    Full Name with concatenation: {{firstName + " " + lastName}}<br>
+
+    Full Name through controller function: {{fullName()}}
 
 <!--    <p>Name : <input type="text" ng-model="name" ng-init="firstName='Denim';lastName='Group'"></p>-->
 
@@ -44,6 +53,12 @@
         </ul>
     </div>
 
+    <ul>
+        <li ng-repeat="y in fullNames">
+            {{ y.fName + ' ' + y.lName }}
+        </li>
+    </ul>
+
     <div ng-init="foods=[
 {food:'pizza',country:'Italy'},
 {food:'burger',country:'America'},
@@ -58,6 +73,27 @@
     </div>
 
     <new-Element></new-Element>
+
+    <form name="emailForm">
+        Email:
+        <input type="email" name="myAddress" ng-model="text">
+        <span ng-show="emailForm.myAddress.$error.email">Not a valid e-mail address</span>
+    </form>
+
+    <p>Enter your e-mail address in the input field. AngularJS will display an errormessage if the address is not an e-mail.</p>
+
+    <!--    different way to validate -->
+    <form name="emailForm2" ng-init="myText = 'email@email.com'">
+
+        Email:
+        <input type="email" name="myAddress" ng-model="myText" required>
+        <p>Edit the e-mail address, and try to change the status.</p>
+        <h1>Status</h1>
+        <p>Valid: {{myForm.myAddress.$valid}} (if true, the value meets all criteria).</p>
+        <p>Dirty: {{myForm.myAddress.$dirty}} (if true, the value has been changed).</p>
+        <p>Touched: {{myForm.myAddress.$touched}} (if true, the field has been in focus).</p>
+
+    </form>
 
 </div>
 
@@ -82,6 +118,14 @@ M for Comment
         $scope.myCol= "lightblue";
         $scope.quantity= 0;
         $scope.cost= 0;
+        $scope.fullName = function() {
+            return $scope.firstName + " " + $scope.lastName;
+        };
+        $scope.fullNames = [
+            {fName:'Andrew',lName:'Swint'},
+            {fName:'John',lName:'Doe'},
+            {fName:'Other',lName:'Name'}
+        ];
     });
     app.directive("testDirective", function() {
         return {
