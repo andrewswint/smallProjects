@@ -1,6 +1,14 @@
+import javax.xml.transform.Result;
 import java.util.Scanner;
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
 
-public class hackerranck {
+public class hackerRank {
 
     public static int minSec(int minutes) {
         return minutes * 60;
@@ -33,6 +41,7 @@ public class hackerranck {
         }
         sc.close();
     }
+
 
     public static void main(String[] args) {
 
