@@ -54,13 +54,21 @@ public class hackerRank {
             return summ == 0;
         }
 
+    public static void stringToken(String input){
+//        input = "test";
+        String[] split = input.split(" ");
+        StringBuilder output = new StringBuilder();
+        for (int i = 0; i < split.length; i++) {
+            output.append("\n").append(i);
+        }
+
+        System.out.println(output);
+    }
+
 
     public static void main(String[] args) {
 
-        System.out.println(isAnagram("hello", "Hello"));
-//        Fails:
-        System.out.println(isAnagram("xyzw", "xyxy"));
-        System.out.println(isAnagram("bbcc", "dabc"));
+        stringToken("He is a very very good boy");
 
     }
 
