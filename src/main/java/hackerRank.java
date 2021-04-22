@@ -41,11 +41,26 @@ public class hackerRank {
         }
         sc.close();
     }
+    public static boolean isAnagram(String a, String b) {
+            if (a.length() != b.length()) return false;
+            a = a.toLowerCase();
+            b = b.toLowerCase();
+            int [] temp = new int [Character.MAX_VALUE];
+            int summ = 0;
+            for (int i = 0; i < a.length(); i++){
+                summ += ++temp [a.charAt(i)] <= 0 ? -1 : 1;
+                summ += --temp [b.charAt(i)] >= 0 ? -1 : 1;
+            }
+            return summ == 0;
+        }
 
 
     public static void main(String[] args) {
 
-        checkType();
+        System.out.println(isAnagram("hello", "Hello"));
+//        Fails:
+        System.out.println(isAnagram("xyzw", "xyxy"));
+        System.out.println(isAnagram("bbcc", "dabc"));
 
     }
 
