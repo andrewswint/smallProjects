@@ -48,12 +48,8 @@ public class hackerRank {
             return summ == 0;
         }
 
-    public static void stringToken(){
-        Scanner scan = new Scanner(System.in);
-        String s = scan.nextLine();
-        String input = s;
-        String[] split = input.split("-|\\.|\\s|'|,|\\?|!|.|@|_");
-        System.out.println(input);
+    public static void stringToken(String s){
+        String[] split = s.split("-|\\.|\\s|'|,|\\?|@|_|!");
         List<String> split2 = Arrays.asList(split);
         List<String> split3 = new ArrayList<>();
         for (int i = 0; i < split2.size(); i ++) {
@@ -72,7 +68,7 @@ public class hackerRank {
 
     public static void main(String[] args) {
 
-        stringToken();
+        stringToken("He is a very very good boy, isn't he?");
 
     }
 
