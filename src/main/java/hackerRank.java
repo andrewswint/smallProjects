@@ -1,12 +1,6 @@
-import javax.xml.transform.Result;
 import java.util.Scanner;
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
+
 
 public class hackerRank {
 
@@ -54,21 +48,31 @@ public class hackerRank {
             return summ == 0;
         }
 
-    public static void stringToken(String input){
-//        input = "test";
-        String[] split = input.split(" ");
-        StringBuilder output = new StringBuilder();
-        for (int i = 0; i < split.length; i++) {
-            output.append("\n").append(i);
+    public static void stringToken(){
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        String input = s;
+        String[] split = input.split("-|\\.|\\s|'|,|\\?|!|.|@|_");
+        System.out.println(input);
+        List<String> split2 = Arrays.asList(split);
+        List<String> split3 = new ArrayList<>();
+        for (int i = 0; i < split2.size(); i ++) {
+            if (!split2.get(i).matches("")) {
+                split3.add(split2.get(i));
+            }
         }
-
-        System.out.println(output);
+        System.out.println(split3.size());
+        StringBuilder split4 = new StringBuilder();
+        for (int i = 0; i < split3.size(); i++) {
+            split4.append(split3.get(i) + "\n");
+        }
+        System.out.println(split4);
     }
 
 
     public static void main(String[] args) {
 
-        stringToken("He is a very very good boy");
+        stringToken();
 
     }
 
